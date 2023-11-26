@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Test = () => {
+const UserProfile = () => {
     return (
         <div>
-            dummy test data
+            user profile
         </div>
     );
 };
 
-export default Test;
+export default UserProfile;

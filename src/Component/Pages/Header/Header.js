@@ -11,9 +11,10 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import AdbIcon from '@mui/icons-material/Adb'; 
+import { Link as RouterLink } from 'react-router-dom';
 
-const pages = ['Products', 'Pricing', 'Blog', 'roling ' , 'bangladesh'];
+const pages = ['Products', 'Pricing', 'Blog', 'dashboard ' , 'test'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Header() {
@@ -121,14 +122,19 @@ function Header() {
           >
             LOGO
           </Typography>
+
+
           <Box sx={{ flexGrow: 1, justifyContent: 'flex-end', display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
+              <Button 
+              component={RouterLink}
+                to={`/${page}`}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
+                {/* <Link  to="/test">test</Link> */}
               </Button>
             ))}
           </Box>

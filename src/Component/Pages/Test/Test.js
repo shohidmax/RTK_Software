@@ -1,9 +1,10 @@
 import React from 'react';
+import AddAgent from '../Form/AddAgent/AddAgent';
 
 const Test = () => {
     return (
         <div>
-            dummy test data
+            <AddAgent/>
         </div>
     );
 };

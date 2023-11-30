@@ -2,14 +2,11 @@ import * as React from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
-import Box from '@mui/material/Box';
-import MuiAppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box'; 
 import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
+import List from '@mui/material/List'; 
 import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import Badge from '@mui/material/Badge';
+import IconButton from '@mui/material/IconButton'; 
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
@@ -23,8 +20,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers'; 
 import WidgetsIcon from '@mui/icons-material/Widgets';
-import { Link as RouterLink, Outlet } from 'react-router-dom';
-import { Button } from '@mui/material';
+import { Link as RouterLink, Outlet } from 'react-router-dom'; 
 
  
 
@@ -85,7 +81,7 @@ export default function Dashboard() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Box sx={{ display: 'flex' }}>
+      <Box xs={12} sx={{ display: 'flex' }}>
         <CssBaseline />
          
         <Drawer variant="permanent" open={open}>
@@ -111,27 +107,46 @@ export default function Dashboard() {
             <ListItemText primary="Dashboard" />
             </ListItemButton>
             
-            <ListItemButton>
+            <ListItemButton component={RouterLink} to="/dashboard/2">
             <ListItemIcon>
-                <ShoppingCartIcon />
-                
+                <ShoppingCartIcon /> 
             </ListItemIcon>
             <ListItemText primary="Orders" />
             </ListItemButton>
-            <ListItemButton>
+
+            <ListItemButton component={RouterLink} to="/dashboard/3">
             <ListItemIcon>
                 <PeopleIcon />
             </ListItemIcon>
             <ListItemText primary="Customers" />
             </ListItemButton>
-            <ListItemButton>
+
+            <ListItemButton component={RouterLink} to="/dashboard/4">
             <ListItemIcon>
                 <BarChartIcon />
-            </ListItemIcon>
-
+            </ListItemIcon> 
             <ListItemText primary="Reports"  /> 
             </ListItemButton >
-            <ListItemButton> 
+
+            <ListItemButton component={RouterLink} to="/dashboard/5"> 
+            <ListItemIcon>
+                <LayersIcon />
+            </ListItemIcon>
+            <ListItemText primary="Integrations"  />
+            </ListItemButton> 
+            <ListItemButton component={RouterLink} to="/dashboard/5"> 
+            <ListItemIcon>
+                <LayersIcon />
+            </ListItemIcon>
+            <ListItemText primary="Integrations"  />
+            </ListItemButton> 
+            <ListItemButton component={RouterLink} to="/dashboard/5"> 
+            <ListItemIcon>
+                <LayersIcon />
+            </ListItemIcon>
+            <ListItemText primary="Integrations"  />
+            </ListItemButton> 
+            <ListItemButton component={RouterLink} to="/dashboard/5"> 
             <ListItemIcon>
                 <LayersIcon />
             </ListItemIcon>
@@ -141,7 +156,7 @@ export default function Dashboard() {
           </List>
         </Drawer>
         <Box
-          component="main"
+          component="main" 
           sx={{
             backgroundColor: (theme) =>
               theme.palette.mode === 'light'
@@ -153,23 +168,36 @@ export default function Dashboard() {
           }}
         >
           <Toolbar />
-          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={3}>
-              {/* Chart */}
-              <Grid item xs={12} md={8} lg={9}>
-              <Box item display="" mx="" my="" sx={{
-                background: 'red'
-              }}>
-              <Outlet></Outlet> 
-                
-              </Box>
-                
-              </Grid>
-              {/* Recent Deposits */}
-              
-               
-            </Grid> 
-          </Container>
+
+
+              <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+                <Grid container spacing={1}> 
+                      <Box item  xs={12} md={8} lg={9}  sx={{
+                        background: 'gray',
+                        width: '100vw',
+                        height:'100vh',
+                        overflow: 'hidden'
+                      }}>
+                      <Outlet></Outlet> 
+                        
+                      </Box> 
+                  
+                  
+                </Grid> 
+              </Container>
+              <Grid container spacing={1}> 
+                      <Box item  xs={12} md={8} lg={9}  sx={{
+                        background: 'gray',
+                        width: '100vw',
+                        height:'100vh',
+                        overflow: 'hidden'
+                      }}>
+                      <Outlet></Outlet> 
+                        
+                      </Box> 
+                  
+                  
+                </Grid> 
         </Box>
       </Box>
     </ThemeProvider>

@@ -9,6 +9,7 @@ import Profile from './Component/Pages/Profiile/Profile';
 import Dashboard from './Component/Pages/Dashboard/Dashboard';
 import AddAgent from './Component/Pages/Form/AddAgent/AddAgent';
 import Mystaff from './Component/Pages/Report/Mystaff/Mystaff';
+import Userreport from './Component/Pages/Report/Userreport/Userreport';
 
 function App() {
  
@@ -25,7 +26,7 @@ function App() {
           <Route index element={<Profile/>}></Route>
           <Route path="/dashboard/1" element={<div>bangladesh</div>}></Route>
           <Route path="/dashboard/2" element={<div>indiaa</div>} />
-          <Route path="/dashboard/3" element={<div>rolex</div>} />
+          <Route path="/dashboard/3" element={<Userreport/>} />
           <Route path="/dashboard/4" element={<Mystaff/>} />  
           <Route path="/dashboard/5" element={<AddAgent/>} />  
         </Route>

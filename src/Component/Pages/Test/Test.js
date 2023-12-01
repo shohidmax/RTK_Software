@@ -3,6 +3,7 @@ import AddAgent from '../Form/AddAgent/AddAgent';
 import Mystaff from '../Report/Mystaff/Mystaff';
 import { Button } from '@mui/material';
 import { useLocation } from 'react-router-dom';
+import Userreport from '../Report/Userreport/Userreport';
 
 const Test = () => {
     let location = useLocation();
@@ -12,6 +13,8 @@ const Test = () => {
 
     return (
         <div>
+
+            {/* <Userreport/> */}
            <Mystaff/>
            <Button onClick={loca} variant='outlied'>use loacation</Button>
         </div>
@@ -29,11 +32,10 @@ const columns = [
     { id: 'Phone_Number', label: 'Phone Number', minWidth: 100 }, 
     { id: 'create_at', label: 'create at', minWidth: 100 }, 
     { id: 'Last_Update', label: 'Last Update at', minWidth: 100 }, 
-    { id: 'Action', label: 'Action', minWidth: 100 }, 
-    
+    { id: 'Action', label: 'Action', minWidth: 100 },  
   ];
 
-  const rows = [
+  const rows2 = [
     { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
     { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
     { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },

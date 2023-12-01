@@ -9,82 +9,49 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { Box, Typography } from '@mui/material';
 
-const columns = [
-  { id: 'name', label: 'Name', minWidth: 170 },
-  { id: 'code', label: 'ISO\u00a0Code', minWidth: 100 },
-  {
-    id: 'population',
-    label: 'Population',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toLocaleString('en-US'),
-  },
-  {
-    id: 'size',
-    label: 'Size\u00a0(km\u00b2)',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toLocaleString('en-US'),
-  },
-  {
-    id: 'density',
-    label: 'Density',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toFixed(2),
-  },
-  {
-    id: 'density',
-    label: 'Density',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toFixed(2),
-  },
-  {
-    id: 'density',
-    label: 'Density',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toFixed(2),
-  },
-  {
-    id: 'density',
-    label: 'Density',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toFixed(2),
-  },
-  {
-    id: 'density',
-    label: 'Density',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toFixed(2),
-  },
+const columns = [  
+    { id: 'ID', label: 'Staff ID', minWidth: 10 }, 
+    { id: 'Name', label: 'Username', minWidth: 10 }, 
+    { id: 'Password', label: 'Password', minWidth: 10}, 
+    { id: 'Designations', label: 'Designations', minWidth: 10 }, 
+    { id: 'Role', label: 'Role', minWidth: 10 }, 
+    { id: 'Nid_Copy', label: 'Nid Copy', minWidth: 10 }, 
+    { id: 'Phone_Number', label: 'Phone Number', minWidth: 10 }, 
+    { id: 'create_at', label: 'create at', minWidth: 10 }, 
+    { id: 'Last_Update', label: 'Last Update at', minWidth: 10 }, 
+    { id: 'Action', label: 'Action', minWidth: 10 }, 
+    
+  ];
+
+// function createData(name, code, population, size) {
+//   const density = population / size;
+//   return { name, code, population, size, density };
+// }
+const renderTableCells = (row) => {
+    return Object.values(row).map((value, index) => (
+      <TableCell key={index}>{value}</TableCell>
+    ));
+  };
+ 
+const rows = [ 
+    {id: 1, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+    {id: 2, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+    {id: 3, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+    {id: 4, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+    {id: 1, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+    {id: 1, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+    {id: 1, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+    {id: 1, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+    {id: 1, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+    {id: 1, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+    {id: 1, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+    {id: 1, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+    {id: 1, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+    {id: 1, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+     
+
 ];
 
-function createData(name, code, population, size) {
-  const density = population / size;
-  return { name, code, population, size, density };
-}
-
-const rows = [
-  createData('India', 'IN', 1324171354, 3287263),
-  createData('China', 'CN', 1403500365, 9596961),
-  createData('Italy', 'IT', 60483973, 301340),
-  createData('United States', 'US', 327167434, 9833520),
-  createData('Canada', 'CA', 37602103, 9984670),
-  createData('Australia', 'AU', 25475400, 7692024),
-  createData('Germany', 'DE', 83019200, 357578),
-  createData('Ireland', 'IE', 4857000, 70273),
-  createData('Mexico', 'MX', 126577691, 1972550),
-  createData('Japan', 'JP', 126317000, 377973),
-  createData('France', 'FR', 67022000, 640679),
-  createData('United Kingdom', 'GB', 67545757, 242495),
-  createData('Russia', 'RU', 146793744, 17098246),
-  createData('Nigeria', 'NG', 200962417, 923768),
-  createData('Brazil', 'BR', 210147125, 8515767),
-];
 
 export default function Mystaff() {
   const [page, setPage] = React.useState(0);
@@ -107,15 +74,12 @@ export default function Mystaff() {
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead  >
-            <TableRow >
+            <TableRow > 
               {columns.map((column) => (
                 <TableCell
-                sx={{
-                    backgroundColor:'#dfdeeb'
-                  }}
                   key={column.id}
                   align={column.align}
-                  style={{ minWidth: column.minWidth }}
+                  style={{ top: 57, minWidth: column.minWidth }}
                 >
                   {column.label}
                 </TableCell>
@@ -123,24 +87,26 @@ export default function Mystaff() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows
+          {rows
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                    {columns.map((column) => {
-                      const value = row[column.id];
-                      return (
-                        <TableCell key={column.id} align={column.align}>
-                          {column.format && typeof value === 'number'
-                            ? column.format(value)
-                            : value}
-                        </TableCell>
-                      );
-                    })}
+                                {/* {rows.map((row) => (
+                        <TableRow key={row.id}>
+                        {renderTableCells(row)}
+                        </TableRow>
+                    ))}  */}
+                    {renderTableCells(row)}
                   </TableRow>
                 );
               })}
+
+{/* {rows.map((row) => (
+            <TableRow key={row.id}>
+              {renderTableCells(row)}
+            </TableRow>
+          ))} */}
           </TableBody>
         </Table>
       </TableContainer>

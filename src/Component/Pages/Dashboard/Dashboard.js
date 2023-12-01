@@ -170,7 +170,7 @@ export default function Dashboard() {
           <Toolbar />
 
 
-              <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+              {/* <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
                 <Grid container spacing={1}> 
                       <Box item  xs={12} md={8} lg={9}  sx={{
                         background: 'gray',
@@ -184,20 +184,23 @@ export default function Dashboard() {
                   
                   
                 </Grid> 
-              </Container>
-              <Grid container spacing={1}> 
-                      <Box item  xs={12} md={8} lg={9}  sx={{
-                        background: 'gray',
-                        width: '100vw',
-                        height:'100vh',
-                        overflow: 'hidden'
-                      }}>
-                      <Outlet></Outlet> 
-                        
-                      </Box> 
-                  
-                  
-                </Grid> 
+              </Container> */}
+             <Paper elevation={8}  xs={{
+              overflow: 'hidden',
+             }}>
+                <Grid container    p={4}> 
+                          <Box item  xs={12} md={8} lg={9}  sx={{
+                            background: '#ffff',
+                            width: '100vw',
+                            height:'100%', 
+                          }}>
+                          <Outlet></Outlet> 
+                            
+                          </Box> 
+                      
+                      
+                    </Grid> 
+             </Paper>
         </Box>
       </Box>
     </ThemeProvider>

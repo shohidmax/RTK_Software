@@ -8,6 +8,7 @@ import Test from './Component/Pages/Test/Test';
 import Profile from './Component/Pages/Profiile/Profile';
 import Dashboard from './Component/Pages/Dashboard/Dashboard';
 import AddAgent from './Component/Pages/Form/AddAgent/AddAgent';
+import Mystaff from './Component/Pages/Report/Mystaff/Mystaff';
 
 function App() {
  
@@ -25,7 +26,7 @@ function App() {
           <Route path="/dashboard/1" element={<div>bangladesh</div>}></Route>
           <Route path="/dashboard/2" element={<div>indiaa</div>} />
           <Route path="/dashboard/3" element={<div>rolex</div>} />
-          <Route path="/dashboard/4" element={<div>qutex</div>} />  
+          <Route path="/dashboard/4" element={<Mystaff/>} />  
           <Route path="/dashboard/5" element={<AddAgent/>} />  
         </Route>
         

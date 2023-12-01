@@ -19,7 +19,7 @@ const AddAgent = () => {
 
 
     return (
-        <Box container m={4} p={4} sx={{
+        <Box container   p={4} sx={{
             width: '100%',
             heright: '100vh'
 
@@ -38,7 +38,7 @@ const AddAgent = () => {
 
                 }}>
                     <TextField id="standard-basic"   label="Profile" variant="standard" required sx={{
-                    width: '350px' , 
+                    width: '100%' , 
                      }}/> 
                 </Box>
                 <Box item display="true"  xs={4} spacing={4}  sx={{
@@ -47,7 +47,7 @@ const AddAgent = () => {
 
                 }}>
                 <TextField id="standard-basic"   label="Profile" variant="standard" required sx={{
-                    width: '350px' 
+                    width: '100%' 
                 }}/> 
                 </Box>
               
@@ -57,7 +57,7 @@ const AddAgent = () => {
 
                 }}>
                 <TextField id="standard-basic"   label="Profile" variant="standard" required sx={{
-                    width: '350px' 
+                    width: '100%' 
                 }}/> 
                 </Box>
               
@@ -67,7 +67,7 @@ const AddAgent = () => {
 
                 }}>
                 <TextField id="standard-basic"   label="Profile" variant="standard" required sx={{
-                    width: '350px' 
+                    width: '100%' 
                 }}/> 
                 </Box>
               
@@ -77,7 +77,7 @@ const AddAgent = () => {
 
                 }}>
                 <TextField id="standard-basic"   label="Profile" variant="standard" required sx={{
-                    width: '350px' 
+                    width: '100%' 
                 }}/> 
                 </Box>
               

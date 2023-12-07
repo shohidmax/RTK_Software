@@ -165,9 +165,26 @@ export default function Dashboard() {
             flexGrow: 1,
             height: '100vh',
             overflow: 'auto',
+            background:'red'
           }}
         >
-          <Toolbar />
+           <Paper elevation={8}  xs={{
+              overflow: 'hidden',
+             }}>
+                <Grid container    p={4}> 
+                          <Box item  xs={12} md={8} lg={9}  sx={{
+                            background: '#ffff',
+                            width: '100vw',
+                            height:'100vh', 
+                          }}>
+                          <Outlet></Outlet> 
+                            
+                          </Box> 
+                      
+                      
+                    </Grid> 
+             </Paper>
+          
 
 
               {/* <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
@@ -185,24 +202,9 @@ export default function Dashboard() {
                   
                 </Grid> 
               </Container> */}
-             <Paper elevation={8}  xs={{
-              overflow: 'hidden',
-             }}>
-                <Grid container    p={4}> 
-                          <Box item  xs={12} md={8} lg={9}  sx={{
-                            background: '#ffff',
-                            width: '100vw',
-                            height:'100%', 
-                          }}>
-                          <Outlet></Outlet> 
-                            
-                          </Box> 
-                      
-                      
-                    </Grid> 
-             </Paper>
-        </Box>
-      </Box>
+            
+        </Box> 
+      </Box> 
     </ThemeProvider>
   );
 }

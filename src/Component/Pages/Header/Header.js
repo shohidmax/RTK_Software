@@ -26,16 +26,13 @@ function Header() {
   };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
-  };
-
+  }; 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
+  }; 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
-  };
-
+  }; 
   return (
     <AppBar position="static">
       <Container maxWidth="xl">

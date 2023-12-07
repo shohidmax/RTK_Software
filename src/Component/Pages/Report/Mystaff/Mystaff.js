@@ -7,9 +7,10 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 
 const columns = [  
+    { id: 'ID', label: ' ID', minWidth: 10 }, 
     { id: 'ID', label: 'Staff ID', minWidth: 10 }, 
     { id: 'Name', label: 'Username', minWidth: 10 }, 
     { id: 'Password', label: 'Password', minWidth: 10}, 
@@ -19,7 +20,7 @@ const columns = [
     { id: 'Phone_Number', label: 'Phone Number', minWidth: 10 }, 
     { id: 'create_at', label: 'create at', minWidth: 10 }, 
     { id: 'Last_Update', label: 'Last Update at', minWidth: 10 }, 
-    { id: 'Action', label: 'Action', minWidth: 10 }, 
+    { id: 'Action', label: 'Action', minWidth: 10 },  
     
   ];
 
@@ -29,12 +30,14 @@ const columns = [
 // }
 const renderTableCells = (row) => {
     return Object.values(row).map((value, index) => (
-      <TableCell key={index}>{value}</TableCell>
+      <TableCell key={index} onClick={() =>{
+        console.log("clicked");
+      }}>{value}</TableCell>
     ));
   };
  
 const rows = [ 
-    {id: 1, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
+    {id: 1, staffid: 'Snow', username: 'shohidmax', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
     {id: 2, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
     {id: 3, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
     {id: 4, staffid: 'Snow', username: 'Jon', password: 3544, desnation: 35, role: 'admin', nid: 'nid0987777', phone: 988766666, carate: '17jan 6366', lastupdate: '2/12/21', action: 'block'},  
@@ -68,18 +71,24 @@ export default function Mystaff() {
 
   return (
     <Box>
-        <Typography variant='body1'> USER DATA</Typography>
+        <Box display="flex" mx="3px" my="10px" sx="">
+        <Typography variant='h4'> My Staff</Typography>
+        <Button variant='outlined' size='small' xs={{
+          MarginInlineStart:'auto',
+          marginStart:'-23px'
+        }}>Add Staff</Button>
+        </Box>
 
       <Paper sx={{ width: '100%', overflow: 'hidden' }}>
       <TableContainer sx={{ maxHeight: 440 }}>
-        <Table stickyHeader aria-label="sticky table">
+        <Table  aria-label="sticky table">
           <TableHead  >
             <TableRow > 
               {columns.map((column) => (
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{ top: 57, minWidth: column.minWidth }}
+                  style={{ top: 57, minWidth: column.minWidth , background: '#DFDEEB'}}
                 >
                   {column.label}
                 </TableCell>
@@ -87,26 +96,14 @@ export default function Mystaff() {
             </TableRow>
           </TableHead>
           <TableBody>
-          {rows
-              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((row) => {
+          {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
                 return (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                                {/* {rows.map((row) => (
-                        <TableRow key={row.id}>
-                        {renderTableCells(row)}
-                        </TableRow>
-                    ))}  */}
+                  <TableRow hover role="checkbox"   key={row.code}>  
+                
                     {renderTableCells(row)}
                   </TableRow>
                 );
-              })}
-
-{/* {rows.map((row) => (
-            <TableRow key={row.id}>
-              {renderTableCells(row)}
-            </TableRow>
-          ))} */}
+              })} 
           </TableBody>
         </Table>
       </TableContainer>

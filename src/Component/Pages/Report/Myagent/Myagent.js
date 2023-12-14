@@ -107,7 +107,7 @@ const rows = [
 ];
 
 
-export default function Mystaff() {
+export default function Myagent() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -123,10 +123,10 @@ export default function Mystaff() {
   return (
     <Box>
         <Box display="flex" p={2}  sx="">
-        <Typography variant='h4' > My Staff</Typography>
+        <Typography variant='h5' > My Agent</Typography>
          <Button  variant="contained" component={Link} to="/dashboard/addagent" size="small" sx={{
           marginLeft:'20px', 
-        }}>Add Staff  </Button>
+        }}>Add agent  </Button>
         
         </Box>
 

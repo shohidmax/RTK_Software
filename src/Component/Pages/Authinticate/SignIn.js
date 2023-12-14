@@ -62,6 +62,7 @@ class SignIn extends Component {
           Don’t have an account ? <Link top='/bangla'>Create Account</Link> 
           </Typography>
           <Box component="form" onSubmit={this.handleSubmit} noValidate sx={{ mt: 1 }}>
+             
             <TextField
               margin="normal"
               required
@@ -74,7 +75,8 @@ class SignIn extends Component {
               value={this.state.email}
               onChange={this.handleChange}
               variant='standard'
-            />
+            /> 
+
             <TextField
               margin="normal"
               required

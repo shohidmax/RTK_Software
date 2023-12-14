@@ -21,24 +21,24 @@ const AddAgent = () => {
     return (
         <Box container   p={4} sx={{
             width: '100%',
-            heright: '100vh'
+            height: '1000px'
 
         }} >
             <Typography variant="h2" color="initial" sx={{
                 textAlign:'start',
                 padding: '20px'
             }}>Add Agent</Typography>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} >
                 <Box item display="true" xs={4} spacing={4}  sx={{
                     margin: 4,
                     flex: 'inline',
                     alignContent: 'center',
                     display:'flex',
-                    alignItems: 'center'
+                    alignItems: 'center', 
 
                 }}>
-                    <TextField id="standard-basic"   label="Profile" variant="standard" required sx={{
-                    width: '100%' , 
+                    <TextField id="standard-basic"   label="Name" variant="standard" required sx={{
+                    width: '350px' , 
                      }}/> 
                 </Box>
                 <Box item display="true"  xs={4} spacing={4}  sx={{
@@ -46,8 +46,8 @@ const AddAgent = () => {
                     flex: 'inline'
 
                 }}>
-                <TextField id="standard-basic"   label="Profile" variant="standard" required sx={{
-                    width: '100%' 
+                <TextField id="standard-basic"   label="Company Name" variant="standard" required sx={{
+                    width: '350px' 
                 }}/> 
                 </Box>
               
@@ -56,8 +56,8 @@ const AddAgent = () => {
                     flex: 'inline'
 
                 }}>
-                <TextField id="standard-basic"   label="Profile" variant="standard" required sx={{
-                    width: '100%' 
+                <TextField id="standard-basic"   label="Phone Number" type='text' variant="standard" required sx={{
+                    width: '350px' 
                 }}/> 
                 </Box>
               
@@ -66,8 +66,8 @@ const AddAgent = () => {
                     flex: 'inline'
 
                 }}>
-                <TextField id="standard-basic"   label="Profile" variant="standard" required sx={{
-                    width: '100%' 
+                <TextField id="standard-basic" type='text'  label="Address" variant="standard" required sx={{
+                    width: '350px' 
                 }}/> 
                 </Box>
               
@@ -76,8 +76,18 @@ const AddAgent = () => {
                     flex: 'inline'
 
                 }}>
-                <TextField id="standard-basic"   label="Profile" variant="standard" required sx={{
-                    width: '100%' 
+                <TextField id="standard-basic"   label="Email" type='email' variant="standard" required sx={{
+                    width: '350px' 
+                }}/> 
+                </Box>
+              
+                <Box item display="true"   xs={4} spacing={4}  sx={{
+                    margin: 4,
+                    flex: 'inline'
+
+                }}> 
+                <TextField id="standard-basic" type='password'   label="Password" variant="standard" required sx={{
+                    width: '350px' 
                 }}/> 
                 </Box>
               
@@ -91,9 +101,21 @@ const AddAgent = () => {
                     <VisuallyHiddenInput type="file" />
                     </Button> 
                 </Box>
+                <Box item display="true"   xs={4} spacing={4}  sx={{
+                    margin: 4,
+                    flex: 'inline'
+
+                }}> 
+                    <Button component="label"   variant="contained" startIcon={<CloudUploadIcon />}>
+                    Upload Tin file
+                    <VisuallyHiddenInput type="file" />
+                    </Button> 
+                </Box>
             </Grid>
 
-            <Button size='large'    variant="contained">submit</Button>
+            <Button size='large' sx={{
+                width:'150px'
+            }} variant="contained">submit</Button>
                 
         </Box>
     );
